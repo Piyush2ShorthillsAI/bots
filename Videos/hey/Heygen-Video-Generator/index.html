@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/vite.svg" type="image/svg+xml" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+    <title>Interactive Avatar Demo</title>
+    
+  </head>
+
+  <body>
+    <main
+      class="container"
+      style="display: flex; flex-direction: column; align-items: center"
+    >
+      <h1>Interactive Avatar Demo (Vite + TypeScript)</h1>
+
+      <!-- Video Section -->
+      <article style="width: fit-content">
+        <video id="avatarVideo" autoplay playsinline></video>
+      </article>
+
+      <!-- Controls Section -->
+      <section>
+        <section role="group">
+          <button id="startSession">Start Session</button>
+          <button id="endSession" disabled>End Session</button>
+          <button id="downloadLatencies">Download Latencies</button> </div>
+        </section>
+
+       
+        <!-- Add this after your existing buttons -->
+<section role="group">
+  <button id="recordButton">Start Recording</button>
+</section>
+
+<div>
+  <p id="recordingStatus"></p>
+</div>
+      </section>
+    </main>
+
+    <pre id="latencyOutput"></pre> 
+    <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@ricky0123/vad/dist/index.browser.js"></script>
+    <script type="module" src="/src/main.ts"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "streaming-avatar-demo",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "~5.7.2",
+    "vite": "^6.3.1"
+  },
+  "dependencies": {
+    "@heygen/streaming-avatar": "^2.0.14",
+    "livekit-client": "^2.11.4",
+    "openai": "^4.97.0"
+  }
+}
